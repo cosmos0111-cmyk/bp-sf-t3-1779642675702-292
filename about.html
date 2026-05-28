@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>마포 셔츠룸 정보 – 서버 웜업 완전 분석</title>
+<meta name="description" content="마포 셔츠룸 서버 웜업에 대한 진짜 정보. 시스템, 팁, 주의사항까지. 현장 10년 차가 말하는 마포 셔츠룸의 모든 것.">
+<meta name="keywords" content="마포 셔츠룸, 서버 웜업, 마포 셔츠룸 정보, 셔츠룸 시스템, 마포 유흥, 셔츠룸 가격">
+<meta name="bpaas-design-system" content="brutalist-avantgarde">
+<meta name="bpaas-design-theme" content="kr-neon-void">
+<link rel="canonical" href="https://sf-t3-1779642675702-292.pages.dev/info">
+<meta property="og:title" content="마포 셔츠룸 서버 웜업 정보 – 숨길 게 없다">
+<meta property="og:description" content="마포 셔츠룸의 시스템, 가격, 서비스 차이. 눈 가리고 아웅하는 정보는 버려라. 여기 진짜가 있다.">
+<style>
+/* RESET & BASE */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif; background: #0b0b0e; color: #e8e8ec; line-height: 1.6; min-height: 100vh; }
+a { color: #f0d060; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.2s; }
+a:hover { color: #ffec9e; border-bottom-color: #f0d060; }
+img, svg { max-width: 100%; display: block; }
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 0.75rem; text-transform: uppercase; }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); margin-bottom: 0.6rem; }
+h3 { font-size: clamp(1.2rem, 2.2vw, 1.8rem); margin-bottom: 0.5rem; }
+p { margin-bottom: 1rem; }
+.block-label { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.8rem; background: #1e1e24; color: #a0a0a8; border-left: 3px solid #f0d060; margin-bottom: 1.2rem; }
+
+/* LAYOUT — SPACE: airy */
+.container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 2rem 1.5rem; }
+section { padding: 3rem 0; }
+.section-gap { height: 3rem; }
+
+/* NAV */
+nav { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 1.5rem; background: #121216; border-bottom: 1px solid #2a2a32; position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-size: 1rem; font-weight: 700; color: #f0d060; text-transform: uppercase; letter-spacing: 0.05em; }
+.nav-links { display: flex; gap: 1.8rem; list-style: none; }
+.nav-links li a { font-size: 0.85rem; font-weight: 600; color: #c0c0c8; border: none; }
+.nav-links li a:hover { color: #f0d060; }
+.hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { width: 26px; height: 2.5px; background: #e8e8ec; border-radius: 2px; transition: 0.3s; }
+.tel-link { display: inline-flex; align-items: center; gap: 6px; background: #f0d060; color: #0b0b0e !important; padding: 0.4rem 1rem; font-weight: 700; font-size: 0.85rem; border-radius: 2px; border: none !important; }
+.tel-link:hover { background: #ffd866; color: #0b0b0e !important; }
+
+/* CARDS & INFO BLOCKS */
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2.5rem 0; }
+.info-card { background: #15151b; border: 1px solid #2a2a32; padding: 2rem 1.5rem; position: relative; }
+.info-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: #f0d060; }
+.info-card h3 { margin-bottom: 1rem; color: #f0d060; }
+.info-card p { color: #b0b0b8; font-size: 0.95rem; }
+.info-card .highlight { color: #ffec9e; font-weight: 700; }
+
+/* FAQ */
+.faq-list { max-width: 800px; margin: 2rem auto; }
+.faq-item { border-bottom: 1px solid #2a2a32; padding: 1.2rem 0; }
+.faq-question { font-weight: 700; font-size: 1.1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #e0e0e8; }
+.faq-question::after { content: '+'; font-size: 1.3rem; color: #f0d060; }
+.faq-answer { margin-top: 0.8rem; color: #9a9aa2; line-height: 1.7; padding-right: 2rem; }
+
+/* CTA */
+.cta-block { background: #1a1a22; border: 1px solid #333; padding: 2.5rem 2rem; margin: 2rem 0; text-align: center; }
+.cta-block p { font-size: 1.1rem; margin-bottom: 1.2rem; }
+.cta-block .tel-link { font-size: 1rem; padding: 0.6rem 1.8rem; }
+
+/* RESPONSIVE 768 */
+@media (max-width: 768px) {
+ .container { padding: 1.2rem; }
+ nav { padding: 0.8rem 1.2rem; }
+ .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #121216; border-bottom: 1px solid #2a2a32; padding: 1rem 1.5rem; gap: 1rem; }
+ .nav-links.active { display: flex; }
+ .hamburger { display: flex; }
+ .info-grid { grid-template-columns: 1fr; }
+ .faq-question { font-size: 1rem; }
+ .cta-block { padding: 2rem 1.2rem; }
+}
+
+/* FOOTER */
+footer { border-top: 1px solid #2a2a32; padding: 2rem 0; margin-top: 3rem; text-align: center; color: #7a7a82; font-size: 0.85rem; }
+footer a { color: #b0b0b8; border: none; }
+footer a:hover { color: #f0d060; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">마포셔츠룸.WORM</div>
+  <button class="hamburger" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('active')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="/">홈</a></li>
+    <li><a href="/info">정보</a></li>
+    <li><a href="/guide">가이드</a></li>
+    <li><a href="/review">후기</a></li>
+    <li><a href="tel:010-1234-5678" class="tel-link">전화 연결</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <section>
+    <span class="block-label">MAPO DISTRICT · EST. 2025</span>
+    <h1>서버 웜업,<br>그 실체를 까발린다</h1>
+    <p style="font-size:1.15rem; color:#c8c8d0; max-width:720px;">마포 셔츠룸. 수많은 웜업방 중에서도 ‘서버’라는 단어가 붙는 이유는 단순하지 않다. 시스템, 서비스의 차이, 그리고 바가지까지. 직접 부딪혀 본 사람만 아는 디테일을 전부 풀어놓는다. 어설픈 입문자용 정보는 집어치워라. 여기는 현장이다.</p>
+  </section>
+
+  <section>
+    <h2>시스템 – 당신이 알아야 할 3가지</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>입장 & 라인업</h3>
+        <p>마포 셔츠룸의 기본은 <span class="highlight">지원 시스템</span>이다. 입장 후 10~20분 내로 아가씨들이 순서대로 들어온다. 1차 선택 후 교체는 1회 가능하지만, ‘퇴장’ 개념이 있는 곳도 있으니 사전 확인은 필수. 홍대입구 쪽 업소는 교체가 자유로운 편이고, 공덕 쪽은 교체 제한이 있는 곳이 있다.</p>
+      </div>
+      <div class="info-card">
+        <h3>서버 웜업이란?</h3>
+        <p>일반 셔츠룸과 달리 ‘서버 웜업’은 <span class="highlight">테이블당 2~3명의 아가씨가 순환</span>하며 분위기를 띄우는 방식을 말한다. 술 따르기, 게임, 스몰토크까지. 하지만 '웜업'이라는 단어에 속아 1차만 하고 나가면 손해다. 대부분의 마포 셔츠룸은 2차 이후의 서비스가 훨씬 중요하다.</p>
+      </div>
+      <div class="info-card">
+        <h3>가격 & 추가금</h3>
+        <p>기본 1시간 20~30만 원대가 일반적. 하지만 <span class="highlight">칵테일, 초이스, 연장</span> 등 옵션을 붙이면 금방 50~70만 원으로 뛴다. 마포 셔츠룸 중 일부는 ‘서버 웜업’이라는 이름으로 기본 요금을 낮춰 보이고, 추가 서비스에서 돈을 뽑는 구조니까 총액을 미리 묻는 게 가장 현명한 방법이다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>마포 셔츠룸, 어디가 다를까?</h2>
+    <p style="margin-bottom:2rem;">홍대, 합정, 공덕, 상암 – 마포 안에서도 동네별로 성격이 확 갈린다. 직접 발로 뛰고 느낀 차이점만 정리했다.</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>홍대 셔츠룸</h3>
+        <p>가장 유동 인구가 많고, 업소 간 경쟁이 치열하다. 덕분에 <span class="highlight">서비스 퀄리티가 평균 이상</span>이고, 시스템이 투명한 편이다. 단, 주말에는 웨이팅이 기본이므로 전화 예약은 선택이 아니라 필수다.</p>
+      </div>
+      <div class="info-card">
+        <h3>합정/망원</h3>
+        <p>비교적 조용한 분위기를 원한다면 여기. ‘로컬’ 느낌이 강하고, 아가씨들도 안정적이다. 다만 서버 웜업이라는 이름을 걸고 있지만 <span class="highlight">실제 서비스는 일반 셔츠룸과 비슷한 곳도 있으니</span> 방문 전에 전화로 시스템을 확인해야 실패하지 않는다.</p>
+      </div>
+      <div class="info-card">
+        <h3>공덕/마포역</h3>
+        <p>오피스가 밀집된 지역이라 <span class="highlight">접대 문화의 잔재가 강하다</span>. 기본 안주와 술 퀄리티는 좋지만, 가격대가 상대적으로 높고 교체에 제한을 두는 업소가 많다. 깐깐한 분이라면 오히려 홍대 쪽을 추천한다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>절대 저지르지 마라 – 초보가 하는 실수 3</h2>
+    <div class="info-grid" style="grid-template-columns:1fr 1fr 1fr;">
+      <div class="info-card" style="border-left-color:#e05a5a;">
+        <h3 style="color:#e05a5a;">① 무조건 처음에 모든 걸 결정</h3>
+        <p>들어가자마자 "시간 얼마나?" 묻고, 바로 초이스? 그건 돈 낭비다. 서버 웜업은 분위기를 본 후 20분쯤 지나서 추가 의사를 밝히는 게 현지인들의 방식이다. 처음부터 성급하게 굴면 바가지의 지름길.</p>
+      </div>
+      <div class="info-card" style="border-left-color:#e05a5a;">
+        <h3 style="color:#e05a5a;">② 카드 결제 거절</h3>
+        <p>일부 마포 셔츠룸은 현금 우대나 카드 수수료를 붙인다. 심지어 아예 카드를 안 받는 곳도 있다. 전화 예약할 때 <span class="highlight">"카드 되나요?"</span> 꼭 물어봐라. 현금만 고집하면 ATM 찾아 헤매는 자신을 발견할 것이다.</p>
+      </div>
+      <div class="info-card" style="border-left-color:#e05a5a;">
+        <h3 style="color:#e05a5a;">③ 아가씨에게 집착</h3>
+        <p>마포 셔츠
+</body>
+</html>
