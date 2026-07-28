@@ -86,77 +86,58 @@ footer a:hover { color: #f0d060; }
 </head>
 <body>
 
-<nav>
-  <div class="nav-logo">마포셔츠룸.WORM</div>
-  <button class="hamburger" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('active')">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="/">홈</a></li>
-    <li><a href="/info">정보</a></li>
-    <li><a href="/guide">가이드</a></li>
-    <li><a href="/review">후기</a></li>
-    <li><a href="tel:010-1234-5678" class="tel-link">전화 연결</a></li>
-  </ul>
-</nav>
+<main class="container section-gap">
+<section class="info-grid">
+<p class="block-label">정보 안내</p>
+<h1>마포 셔츠룸, 방문 전 알아두면 좋은 정보</h1>
+<div class="info-card">
+<h2>이용 절차</h2>
+<p>문의 및 예약, 방문, 이용 순으로 진행되는 경우가 일반적입니다. 업체별로 예약 확정 방식이 다르므로 전화 문의 시 예약 확정 여부를 다시 한번 확인하는 절차를 거치는 것이 안전합니다. 예약 확정 이후에도 변경 사항이 생기면 가능한 빨리 알리는 것이 좋습니다.</p>
+</div>
+<div class="info-card highlight">
+<h2>확인해야 할 사항</h2>
+<p>운영 시간, 주차 가능 여부, 인원 제한, 결제 방식은 업체마다 차이가 있어 방문 전 확인이 필요한 항목입니다. 특히 단체 방문을 계획한다면 사전 인원 통보가 요구되는 경우가 많습니다. 세부 규정은 업체별로 다를 수 있어 문의 시 함께 확인하는 것이 좋습니다.</p>
+</div>
+<div class="info-card">
+<h2>지역별 접근 정보</h2>
+<p>마포 권역은 대중교통 노선이 다양해 접근성이 좋은 편이지만, 정확한 위치는 지도 애플리케이션으로 재확인하는 것을 권장합니다. 인근 화곡 지역과 혼동되는 주소가 있을 수 있어 주의가 필요합니다.</p>
+</div>
+<div class="info-card">
+<h2>준비하면 좋은 것</h2>
+<ul>
+<li>희망 방문 일정과 대체 일정</li>
+<li>예상 방문 인원</li>
+<li>결제 수단</li>
+<li>문의 시 궁금한 사항 목록</li>
+</ul>
+</div>
+</section>
 
-<main class="container">
-  <section>
-    <span class="block-label">MAPO DISTRICT · EST. 2025</span>
-    <h1>서버 웜업,<br>그 실체를 까발린다</h1>
-    <p style="font-size:1.15rem; color:#c8c8d0; max-width:720px;">마포 셔츠룸. 수많은 웜업방 중에서도 ‘서버’라는 단어가 붙는 이유는 단순하지 않다. 시스템, 서비스의 차이, 그리고 바가지까지. 직접 부딪혀 본 사람만 아는 디테일을 전부 풀어놓는다. 어설픈 입문자용 정보는 집어치워라. 여기는 현장이다.</p>
-  </section>
+<section class="faq-list">
+<h2>자주 묻는 질문</h2>
+<div class="faq-item active">
+<p class="faq-question">Q. 예약 없이 방문해도 되나요?</p>
+<p class="faq-answer">당일 상황에 따라 대기가 발생할 수 있어 사전 예약이 권장됩니다.</p>
+</div>
+<div class="faq-item">
+<p class="faq-question">Q. 서버 웜업이라는 표현은 무엇을 뜻하나요?</p>
+<p class="faq-answer">이 페이지 태그에 표시된 분류용 표현으로, 본문 안내 내용과는 별도로 사용됩니다.</p>
+</div>
+<div class="faq-item">
+<p class="faq-question">Q. 결제 방법은 어떻게 되나요?</p>
+<p class="faq-answer">업체별로 현금, 카드 등 지원 방식이 다르므로 방문 전 문의로 확인하는 것이 정확합니다.</p>
+</div>
+<div class="faq-item">
+<p class="faq-question">Q. 인원이 변경되면 어떻게 해야 하나요?</p>
+<p class="faq-answer">가능한 한 빨리 전화로 변경된 인원을 알리면 안내가 원활해집니다.</p>
+</div>
+</section>
 
-  <section>
-    <h2>시스템 – 당신이 알아야 할 3가지</h2>
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>입장 & 라인업</h3>
-        <p>마포 셔츠룸의 기본은 <span class="highlight">지원 시스템</span>이다. 입장 후 10~20분 내로 아가씨들이 순서대로 들어온다. 1차 선택 후 교체는 1회 가능하지만, ‘퇴장’ 개념이 있는 곳도 있으니 사전 확인은 필수. 홍대입구 쪽 업소는 교체가 자유로운 편이고, 공덕 쪽은 교체 제한이 있는 곳이 있다.</p>
-      </div>
-      <div class="info-card">
-        <h3>서버 웜업이란?</h3>
-        <p>일반 셔츠룸과 달리 ‘서버 웜업’은 <span class="highlight">테이블당 2~3명의 아가씨가 순환</span>하며 분위기를 띄우는 방식을 말한다. 술 따르기, 게임, 스몰토크까지. 하지만 '웜업'이라는 단어에 속아 1차만 하고 나가면 손해다. 대부분의 마포 셔츠룸은 2차 이후의 서비스가 훨씬 중요하다.</p>
-      </div>
-      <div class="info-card">
-        <h3>가격 & 추가금</h3>
-        <p>기본 1시간 20~30만 원대가 일반적. 하지만 <span class="highlight">칵테일, 초이스, 연장</span> 등 옵션을 붙이면 금방 50~70만 원으로 뛴다. 마포 셔츠룸 중 일부는 ‘서버 웜업’이라는 이름으로 기본 요금을 낮춰 보이고, 추가 서비스에서 돈을 뽑는 구조니까 총액을 미리 묻는 게 가장 현명한 방법이다.</p>
-      </div>
-    </div>
-  </section>
+<section class="cta-block">
+<p>문의 연락처: <a class="tel-link" href="tel:010-1234-5678">010-1234-5678</a></p>
+</section>
+</main>
 
-  <section>
-    <h2>마포 셔츠룸, 어디가 다를까?</h2>
-    <p style="margin-bottom:2rem;">홍대, 합정, 공덕, 상암 – 마포 안에서도 동네별로 성격이 확 갈린다. 직접 발로 뛰고 느낀 차이점만 정리했다.</p>
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>홍대 셔츠룸</h3>
-        <p>가장 유동 인구가 많고, 업소 간 경쟁이 치열하다. 덕분에 <span class="highlight">서비스 퀄리티가 평균 이상</span>이고, 시스템이 투명한 편이다. 단, 주말에는 웨이팅이 기본이므로 전화 예약은 선택이 아니라 필수다.</p>
-      </div>
-      <div class="info-card">
-        <h3>합정/망원</h3>
-        <p>비교적 조용한 분위기를 원한다면 여기. ‘로컬’ 느낌이 강하고, 아가씨들도 안정적이다. 다만 서버 웜업이라는 이름을 걸고 있지만 <span class="highlight">실제 서비스는 일반 셔츠룸과 비슷한 곳도 있으니</span> 방문 전에 전화로 시스템을 확인해야 실패하지 않는다.</p>
-      </div>
-      <div class="info-card">
-        <h3>공덕/마포역</h3>
-        <p>오피스가 밀집된 지역이라 <span class="highlight">접대 문화의 잔재가 강하다</span>. 기본 안주와 술 퀄리티는 좋지만, 가격대가 상대적으로 높고 교체에 제한을 두는 업소가 많다. 깐깐한 분이라면 오히려 홍대 쪽을 추천한다.</p>
-      </div>
-    </div>
-  </section>
 
-  <section>
-    <h2>절대 저지르지 마라 – 초보가 하는 실수 3</h2>
-    <div class="info-grid" style="grid-template-columns:1fr 1fr 1fr;">
-      <div class="info-card" style="border-left-color:#e05a5a;">
-        <h3 style="color:#e05a5a;">① 무조건 처음에 모든 걸 결정</h3>
-        <p>들어가자마자 "시간 얼마나?" 묻고, 바로 초이스? 그건 돈 낭비다. 서버 웜업은 분위기를 본 후 20분쯤 지나서 추가 의사를 밝히는 게 현지인들의 방식이다. 처음부터 성급하게 굴면 바가지의 지름길.</p>
-      </div>
-      <div class="info-card" style="border-left-color:#e05a5a;">
-        <h3 style="color:#e05a5a;">② 카드 결제 거절</h3>
-        <p>일부 마포 셔츠룸은 현금 우대나 카드 수수료를 붙인다. 심지어 아예 카드를 안 받는 곳도 있다. 전화 예약할 때 <span class="highlight">"카드 되나요?"</span> 꼭 물어봐라. 현금만 고집하면 ATM 찾아 헤매는 자신을 발견할 것이다.</p>
-      </div>
-      <div class="info-card" style="border-left-color:#e05a5a;">
-        <h3 style="color:#e05a5a;">③ 아가씨에게 집착</h3>
-        <p>마포 셔츠
 </body>
 </html>
